@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Navigation Style</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:700" rel="stylesheet">
+</head>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        font-family: Poppins, sans-serif;
+    }
+    
+    ul {
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+    
+    ul li {
+        list-style: none;
+        margin: 0;
+        font-size: 4em;
+    }
+    
+    ul li a {
+        position: relative;
+        color: #ddd;
+        text-decoration: none;
+        font-weight: 700;
+    }
+    
+    ul li a:before {
+        content: attr(data-target);
+        position: absolute;
+        top: -2px;
+        width: 100%;
+        color: #262626;
+        overflow: hidden;
+        white-space: nowrap;
+        transition: .5s ease-in-out;
+    }
+    
+    ul:hover li a:before {
+        width: 0;
+    }
+    
+    ul li:hover a:before {
+        width: 100%;
+    }
+</style>
+
+<body>
+
+    <ul>
+        <li><a href="#" data-target="Home">Home</a></li>
+        <li><a href="#" data-target="About">About</a></li>
+        <li><a href="#" data-target="Services">Services</a></li>
+        <li><a href="#" data-target="Menu">Menu</a></li>
+        <li><a href="#" data-target="Our Team">Our Team</a></li>
+        <li><a href="#" data-target="Contact Us">Contact Us</a></li>
+    </ul>
+
+</body>
+
+</html>
